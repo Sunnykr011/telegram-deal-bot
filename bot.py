@@ -852,10 +852,10 @@ async def process_all_items(items):
         """Format product info into deal structure"""
         
         if not platform:
-        platform = ProductScraper.detect_platform(clean_url)
+            platform = ProductScraper.detect_platform(clean_url)
         
         # Build first line components
-        line_components = []
+            line_components = []
         
         # Brand (if available and not in title)
         brand = product_info.get('brand', '').strip()
